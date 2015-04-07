@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="#ff000000" tools:context=".Launcher"
+    android:orientation="vertical"
+    android:id="@+id/rootll"
+    android:gravity="bottom">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:src="@android:drawable/ic_menu_delete"
+            android:tag="apps"
+            android:layout_gravity="center"
+            android:focusableInTouchMode="false"
+            android:clickable="true"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:maxHeight="50dp"
+            android:maxWidth="10dp" />
+
+        <ImageView
+            android:id="@+id/ivAssign"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@android:drawable/ic_menu_search"
+            android:tag="apps"
+            android:focusableInTouchMode="false"
+            android:clickable="true"
+            android:onClick="assignApp"
+            android:layout_weight="1"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/IVApps"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@android:drawable/ic_dialog_dialer"
+            android:tag="apps"
+            android:layout_gravity="center"
+            android:focusableInTouchMode="false"
+            android:longClickable="true"
+            android:layout_weight="1"
+            android:layout_margin="7dp"
+            android:onClick="showApps" />
+
+        <ImageView
+            android:id="@+id/ivAddChild"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@mipmap/add_child"
+            android:tag="apps"
+            android:layout_gravity="center"
+            android:focusableInTouchMode="false"
+            android:clickable="true"
+            android:onClick="addLevel"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:maxHeight="50dp"
+            android:maxWidth="10dp" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/ivAdd"
+            android:src="@mipmap/add"
+            android:tag="apps"
+            android:focusableInTouchMode="false"
+            android:clickable="true"
+            android:onClick="addShortcut"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+</LinearLayout>
