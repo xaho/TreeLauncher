@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +30,7 @@ public class AppGridActivity extends Activity implements AdapterView.OnItemClick
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.i("AGAlifecycle","onCreate");
         setContentView(R.layout.activity_app_grid);
 
         loadApps();
@@ -108,5 +110,35 @@ public class AppGridActivity extends Activity implements AdapterView.OnItemClick
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
         }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.i("AGAlifecycle","onPause");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i("AGAlifecycle","onResume");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.i("AGAlifecycle","onStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i("AGAlifecycle","onDestroy");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.i("AGAlifecycle","onRestart");
     }
 }

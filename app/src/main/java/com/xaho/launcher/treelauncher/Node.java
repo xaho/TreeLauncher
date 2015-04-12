@@ -8,4 +8,5 @@ import java.util.ArrayList;
 public class Node {
     public ArrayList<Integer> level = new ArrayList<Integer>();
     public ArrayList<Node> children = new ArrayList<>();
+    public App app = new App();
 }

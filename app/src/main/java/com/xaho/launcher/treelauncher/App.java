@@ -8,7 +8,7 @@ import android.graphics.drawable.Drawable;
 public class App implements Comparable<App>{
     CharSequence name;
     Drawable icon;
-    String packageName;
+    String packageName = "";
 
     @Override
     public int compareTo(App another) {
